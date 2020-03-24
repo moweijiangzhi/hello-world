@@ -1,0 +1,18 @@
+建立数据库
+create database student3
+on primary 
+(name='student3_data',
+filename='f:\mysql\student3_data.mdf',
+size=3mb,
+maxsize=20mb,
+filegrowth=20%),
+(name='student3_data2',
+filename='f:\mysql\student3_data2.ndf'
+)
+log on
+(name='student3_log',
+filename='f:\mysql\student3_log.ldf',
+size=1mb,
+maxsize=10mb,
+filegrowth=10%)
+go
