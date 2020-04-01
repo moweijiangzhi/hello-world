@@ -1,0 +1,18 @@
+create table major
+(majorno char(4) primary key
+)
+create table class
+(classno char(6) primary key,
+classname varchar(30) not null,
+majorno char(4) constraint smwy references major(majorno)
+)
+go
+create table student
+(snono char(6) primary key,
+snname varchar(30) not null,
+ssex char(4),
+sbirth date,
+shome varchar(20),
+sdate date,
+classno char(6) constraint class2 references class(classno)
+)
